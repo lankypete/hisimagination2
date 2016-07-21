@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: #787096;
+}
+
+a:hover{
+	color: black;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+.colourone{
+	background-color: white;
+}
+
+.colourtwo{
+	background-color: lightblue;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100vw;
+	overflow: hidden;
+}
+
+#doublewidth{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200vw;
+	height: 100%;
+}
+
+.hisimagination{
+	font-size: 60px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 10px;
+	background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, transparent); /* Standard syntax */
+}
+
+#leftside, #rightside{
+	width: 50%;
+	height: 100%;
+	float: left;
+	overflow: scroll;
+}
+
+#leftside{
+	position: relative;
+}
+
+#content{
+	width: 700px;
+	margin: 160px auto 0px;
+}
+
+.albumart, .albumtitle{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.albumtitle{
+	text-align: center;
+}
+
+#rightside{
+	position: relative;
+}
+
+#fanlist{
+	width: 500px;
+	margin: 160px auto 0px;
+}
+
+#fanlist p{
+	text-align: center;
+}
+
+/*nav nav nav nav nav nav nav nav nav nav */
+
+#nav{
+	position: fixed;
+	top: 100px;
+	left: 30px;
+}
+
+#nav a{
+	border-left: 1px solid transparent;
+}
+
+#nav a:hover{
+	border-left: 1px solid black;
+}
+
+#nav li{
+	margin-top: 30px;
+}
+
+#fannav{
+	position: absolute;
+	border: solid black;
+	height: 500px;
+	width: 200px;
+	right: -100%;
+	top: 100px;
+}
