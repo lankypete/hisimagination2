@@ -26,26 +26,13 @@
 			<!--THE MAIN CONTENT OF THE PAGE PEOPLE-->
 			<!--LIST MUSIC HERE-->
 			<div class="music">
-				<h1 class="albumtitle">Argent légal by Rednext Level</h1>
-				<img class="albumart" src="images/art1.jpg">
-				<iframe style="border: 0; width: 100%; height: 472px;" src="http://bandcamp.com/EmbeddedPlayer/album=3881061328/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/" seamless><a href="http://rednextlevel.bandcamp.com/album/argent-l-gal">Argent légal by Rednext Level</a></iframe>
+				<div class="albumtitle">Days (1 - 23) [Compilation Album]</div>
+				<iframe style="border: 0; width: 500px; height: 400px;" src="https://bandcamp.com/EmbeddedPlayer/album=2735350443/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://hisimagination.bandcamp.com/album/days-1-23">Days (1 - 23) by hisimagination</a></iframe>
 			</div>
 			<!--LIST FEED HERE-->
 			<div class="feed">
-				<div id="startinghisimagination">
-					5:17am<br>
-					July 1st 2016<br>
-					Starting hisimagination<br>
-					<br>
-					im coming down, i was on mdma<br>
-					we should have a very honest relationship<br>
-					otherwise I will just start this off here and you will never see the code I
-					just wrote.<br>
-					I'm 24 and I live in Montreal, Canada. I'm just starting to release music as
-					hisimagination.  I have a dream to one day play my music on really loud sound
-					systems.  Control the vibe of a crowd and have a party great people in front of me.
-					I think music I the greatest gift.  I grown to like nearly all of it.  But something about
-					a crazy bassy soundsystem and weird basslines that just seem grooby somehow.
+				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmusicianhisimagination%2Fposts%2F1728706987417160&width=500" width="500" height="457" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				<div style="height: 300px;">
 				</div>
 			</div>
 		</div>
@@ -67,7 +54,7 @@
 		</div>
 	</div>
 	</div>
-	<div class="hisimagination"><img style="height: 100px; margin-left: 10px" src="images/montreallogo.png">
+	<div class="hisimagination"><img style="width: 200px; margin-left: 25px" src="images/hisimagination300.png">
 	</div>
 	<ul id="nav">
 		<li><a id="musiclink" href="#leftside">&nbsp;Music</a></li>
@@ -77,7 +64,7 @@
 	</ul>
 	<!--FANNAV FANNAV FANNAV-->
 	<div id="fannav">
-		<h2 id="joinjoin">Room for one more (Join)</h2>
+		<h2 id="joinjoin">Room for one more!</h2>
 
 	</div>
 </body>
@@ -121,6 +108,9 @@
 <script>
 	// to switch between feed and music
 	//initially the music link will be bold
+	//and only the music section will be visible
+	$(".music, .feed").hide();
+	$(".music").fadeIn("slow");
 	var status = "music";
 	var boldType = {
       color : "black",
@@ -163,12 +153,13 @@
 function newForm(){
 
 	$('#joinjoin').hide();
-	$('#fannav').append('<form id="newFanForm" target="_blank" action="http://localhost:8888/sourcefiles/addfan.php" method="post">\
-			<p>Name:</p>\
+	$('#fannav').append('<form id="newFanForm" target="_blank" action="http://localhost:8888/hisimagination/addfan.php" method="post">\
+			<p>Name ..</p>\
 			<input type="text" name="name" value="">\
-			<p>Email:</p>\
+			<br><br>\
+			<p>Email ..</p>\
 			<input type="text" name="email" value="">\
-			<br/>\
+			<br/><br>\
 			<input id="formSubmit" type="submit" name="submit" value="join"></form>');
 	$('#formSubmit').hide();
 	$('#fannav').append('<button id="checkButton" type="button" onclick="formCheck()">Check ..</button>');

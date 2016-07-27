@@ -20,6 +20,10 @@ li{
 	list-style: none;
 }
 
+h2{
+	font-size: 120%;
+}
+
 .colourone{
 	background-color: white;
 }
@@ -77,6 +81,11 @@ body{
 	margin: 160px auto 0px;
 }
 
+.feed iframe, .music iframe{
+	display: block;
+	margin: 0 auto;
+}
+
 .albumart, .albumtitle{
 	width: 100%;
 	margin-bottom: 20px;
@@ -84,6 +93,7 @@ body{
 
 .albumtitle{
 	text-align: center;
+	font-size: 120%;
 }
 
 #rightside{
@@ -121,9 +131,21 @@ body{
 
 #fannav{
 	position: absolute;
-	border: solid black;
 	height: 500px;
 	width: 200px;
-	right: -100%;
+	right: -97%;
 	top: 100px;
+}
+
+form p{
+	text-align: center;
+}
+
+form input{
+	width: 100%;
+}
+
+#checkButton{
+	display: block;
+	margin: 0 auto;
 }

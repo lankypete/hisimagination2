@@ -1,8 +1,8 @@
 <?php
 include 'config.php';
-echo 'hi';
+echo 'hi..<br>';
 if(isset($_POST['submit'])){
-	echo 'values are filled<br>';
+	echo 'values are filled..<br>';
 	//the missing dat array
 	$data_missing = array();
 
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 }
 
 if(empty($data_missing)){
-	echo 'data missing is empty' ;
+	echo 'data missing is empty..<br>' ;
 	$hash = md5(rand(0,1000));// Generate random 32 character hash and assign it to a local variable.
 	$hashEscaped = mysqli_real_escape_string($con, $hash);
 	$query = "INSERT INTO fantable (name, email, hash) VALUES ('$name', '$email', '$hashEscaped')";
@@ -48,16 +48,16 @@ if(empty($data_missing)){
 		------------------------
 
 		Please click this link to activate your account:
-		http://localhost:8888/sourcefiles/verify.php?email='.$emailCopy.'&hash='.$hash.'
+		http://localhost:8888/hisimagination/verify.php?email='.$emailCopy.'&hash='.$hash.'
 
 		'; // Our message above including the link
 
 		$headers = 'From:noreply@yourwebsite.com' . "\r\n"; // Set from headers
 		mail($to, $subject, $message, $headers); // Send our email
-		echo 'cool it worked';
+		echo 'cool it worked!<br>Check your email to activate yourself!';
 
 	}else{
-		echo 'so close but noooooo,<br>';
+		echo 'so close but noooooo<br>';
 		echo mysqli_error($con);
 
 	}
@@ -68,18 +68,5 @@ else{
 		echo "$missing <br>";
 	}
 }
-
-echo '<form action="http://localhost:8888/sourcefiles/addfan.php" method="post">
-			<h2>Room for one more</h2>
-
-			<p>Name:</p>
-			<input type="text" name="name" value="">
-
-			<p>Email:</p>
-			<input type="text" name="email" value="">
-			<br/>
-			<input type="submit" name="submit" value="join">
-		</form>';
-
 
 ?>
